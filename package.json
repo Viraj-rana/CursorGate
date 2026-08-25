@@ -1,0 +1,71 @@
+{
+  "name": "cursor-gate",
+  "displayName": "CursorGate",
+  "description": "Share and sync Cursor AI chats via your private GitHub repo — free, serverless, zero backend.",
+  "version": "0.1.0",
+  "publisher": "cursorgate",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:cursorGate.sidebar"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cursor-gate",
+          "title": "CursorGate",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "cursor-gate": [
+        {
+          "id": "cursorGate.sidebar",
+          "name": "Chat Gate"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "cursorGate.connect",
+        "title": "CursorGate: Connect GitHub"
+      },
+      {
+        "command": "cursorGate.syncNow",
+        "title": "CursorGate: Sync Now"
+      },
+      {
+        "command": "cursorGate.shareChat",
+        "title": "CursorGate: Share Selected Chat"
+      },
+      {
+        "command": "cursorGate.refresh",
+        "title": "CursorGate: Refresh Status"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.24.0",
+    "typescript": "^5.4.0"
+  }
+}
