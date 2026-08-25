@@ -1,15 +1,50 @@
 {
   "name": "cursor-gate",
-  "displayName": "CursorGate",
-  "description": "Share and sync Cursor AI chats via your private GitHub repo — free, serverless, zero backend.",
-  "version": "0.1.0",
-  "publisher": "cursorgate",
+  "displayName": "CursorGate — Sync & Share Cursor AI Chats",
+  "description": "Sync and share Cursor AI chat history across devices using your private GitHub repo. Free, serverless backup for Cursor conversations — no third-party servers.",
+  "version": "0.1.1",
+  "publisher": "viraj",
   "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#0B1020",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Viraj-rana/CursorGate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Viraj-rana/CursorGate/issues"
+  },
+  "homepage": "https://github.com/Viraj-rana/CursorGate#readme",
+  "qna": "https://github.com/Viraj-rana/CursorGate/issues",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Machine Learning",
+    "Education"
+  ],
+  "keywords": [
+    "cursor",
+    "cursor ai",
+    "cursor chat",
+    "cursor sync",
+    "chat history",
+    "ai chat",
+    "share chat",
+    "sync chats",
+    "github backup",
+    "private github",
+    "composer",
+    "agent chat",
+    "conversation backup",
+    "multi device",
+    "cursorgate",
+    "vscode",
+    "ai coding"
   ],
   "activationEvents": [
     "onStartupFinished",
@@ -37,19 +72,23 @@
     "commands": [
       {
         "command": "cursorGate.connect",
-        "title": "CursorGate: Connect GitHub"
+        "title": "CursorGate: Connect GitHub",
+        "category": "CursorGate"
       },
       {
         "command": "cursorGate.syncNow",
-        "title": "CursorGate: Sync Now"
+        "title": "CursorGate: Sync Now",
+        "category": "CursorGate"
       },
       {
         "command": "cursorGate.shareChat",
-        "title": "CursorGate: Share Selected Chat"
+        "title": "CursorGate: Share Selected Chat",
+        "category": "CursorGate"
       },
       {
         "command": "cursorGate.refresh",
-        "title": "CursorGate: Refresh Status"
+        "title": "CursorGate: Refresh Status",
+        "category": "CursorGate"
       }
     ]
   },
