@@ -73,7 +73,6 @@ export function composerToMarkdown(composer: ComposerExport): string {
       : [...byBubbleId.keys()];
 
   if (orderedIds.length === 0 && (composer.bubbles || []).length === 0) {
-    // Legacy conversationMap fallback
     const map =
       composer.composerData &&
       typeof composer.composerData === 'object'
